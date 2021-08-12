@@ -14,5 +14,8 @@ Clang is an "LLVM native" C/C++/Objective-C compiler a substitute to GCC. Distri
 ### Make [Read more](https://www.gnu.org/software/make/)
 Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files. 
 
+### Binutils [Read more](https://www.gnu.org/software/binutils/)
+Binutils is a collection of software development tools containing a linker, assembler and other tools to work with object files and archives.
+
 
 

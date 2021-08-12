@@ -17,5 +17,9 @@ Make is a tool which controls the generation of executables and other non-source
 ### Binutils [Read more](https://www.gnu.org/software/binutils/)
 Binutils is a collection of software development tools containing a linker, assembler and other tools to work with object files and archives.
 
+### Flex (fast lexical analyzer generator) [Wikipedia](https://en.wikipedia.org/wiki/Flex_(lexical_analyser_generator))
+Flex is a tools that generates programs that perform pattern-matching on text.
+
+
 
 

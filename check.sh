@@ -6,6 +6,8 @@ clang --version | head -n1
 make --version | head -n1
 git --version
 cscope --version 
+python3 --version
+echo perl `perl -V:version`
 vim --version | head -n1
 ld -v
 flex --version

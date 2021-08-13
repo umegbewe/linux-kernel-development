@@ -1,6 +1,9 @@
 # Linux Kernel Development
 
-The purpose of this repo is to get you started with packages and resources necessary to develop for the linux kernel
+The purpose of this repo is to get you started with packages and resources necessary to develop for the Linux Kernel
+
+## check.sh script
+The check.sh script checks and installs the required packages to compile Linux Kernel for your distribution
 
 ## Courses and Links
 - https://training.linuxfoundation.org/training/a-beginners-guide-to-linux-kernel-development-lfd103/ (Recommended)
@@ -41,7 +44,7 @@ Module signing and external certificate handling use the OpenSSL and crypto libr
 ### Kmod [Read more](https://man7.org/linux/man-pages/man8/kmod.8.html)
 kmod is a multi-call binary which implements the programs used to control Linux Kernel modules. Linux distributions use modules in order to load only the needed driver for the system based on the hardware present, instead of building all possible drivers in the kernel to one large chunk.
 
-**These are the basic packages required, you can find others [here](https://www.kernel.org/doc/html/latest/process/changes.html) or run the ``check.sh`` script to check and install the necessary package required to compile Linux Kernels for your distribution**
+**These are the basic packages required listed, you can find others [here](https://www.kernel.org/doc/html/latest/process/changes.html)**
 
 
 

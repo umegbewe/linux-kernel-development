@@ -24,7 +24,12 @@ Flex is a tool that generates programs that perform pattern-matching on text.
 Bison is a general-purpose parser generator that converts a grammar description (Bison Grammar Files) for an LALR(1) context-free grammar into a C program to parse that grammar, the linux kernel build system generates parsers during build. This requires bison 2.0 or later.
 
 ### Perl [Read more](https://unix.stackexchange.com/questions/48018/why-is-perl-installed-by-default-with-most-linux-distributions)
-You might wonder why perl? Obviously the Linux Kernel isn't written in but needed to built some packages, you need perl 5 and the following modules: ``Getopt::Long``, ``Getopt::Std``, ``File::Basename``, and ``File::Find`` to build the kernel.
+Might wonder why perl? Obviously the Linux Kernel isn't written in Perl but it is needed to built some packages, you need perl 5 and the following modules: ``Getopt::Long``, ``Getopt::Std``, ``File::Basename``, and ``File::Find`` to build the kernel.
+
+### BC (Basic Calculator) [Wikipedia](https://en.wikipedia.org/wiki/Bc_(programming_language))
+bc is used during the kernel build to generate time constants in header files. Perl was formerly used but required a mechanism to support Perl < 5.8 installations lacking the ``Math::BigInt`` module [check this commit](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=70730bca1331fc50c3caacaea00439de1325bd6e). Though this could still be implemented with C or Perl.
+
+
 
 
 

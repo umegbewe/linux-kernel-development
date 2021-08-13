@@ -3,8 +3,10 @@
 The purpose of this repo is to get you ready with tools and resources to develop for the linux kernel
 
 ## Courses and Links
-- https://training.linuxfoundation.org/training/a-beginners-guide-to-linux-kernel-development-lfd103/
-- 
+- https://training.linuxfoundation.org/training/a-beginners-guide-to-linux-kernel-development-lfd103/ (Recommended)
+- https://www.linuxtopia.org/online_books/linux_kernel/kernel_configuration/
+- https://www.kernel.org/doc/html/v4.16/process/howto.html
+- Linux From Scratch Book
 
 ## Minimum Requirements to compile the Linux Kernel
 

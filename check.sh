@@ -1,5 +1,4 @@
 #!/bin/bash
-#!/bin/bash
 
 ## ANSI colors (FG & BG)
 RED="$(printf '\033[31m')"  GREENS="$(printf '\033[32m')"  ORANGE="$(printf '\033[33m')"  BLUE="$(printf '\033[34m')"
@@ -30,28 +29,137 @@ reset_color() {
 }
 
 # checks if your distribution is ready for kernel development.
-gcc --version | head -n1
-clang --version | head -n1
-make --version | head -n1
-ld -v
-flex --version
-bison --version | head -n1
-echo perl `perl -V:version`
-bc --version | head -n1
-openssl version
-depmod -V | head -n1
-fdformat --version
-e2fsck -V | head -n1
-fsck.jfs -V | head -n1
-reiserfsck -V
-mksquashfs -version | head -n1
-pccardctl -V
-quota -V | head -n1
-pppd --version | head -n1
-showmount --version
-ps --version
-udevd –version
-grub-install --version || grub --version
+if [[ `command -v gcc` ]]; then
+    echo "Gcc OK"
+else echo "Gcc NO"
+fi
+
+if [[ `command -v clang` ]]; then
+    echo "Clang OK"
+else echo "Clang NO"
+fi
+
+if [[ `command -v make` ]]; then
+    echo "Make OK"
+else echo "Make NO"
+fi
+if [[ `command -v ld` ]]; then
+    echo "Binutils OK"
+else echo "BInutils NO"
+fi
+
+if [[ `command -v flex` ]]; then
+    echo "Flex OK"
+else echo "Flex NO"
+fi
+
+if [[ `command -v bison` ]]; then
+    echo "Bison OK"
+else echo "Bison NO"
+fi
+
+if [[ `command -v perl` ]]; then
+    echo "Perl OK"
+else echo "Perl NO"
+fi
+
+if [[ `command -v bc` ]]; then
+    echo "Bc OK"
+else echo "Bc NO"
+fi
+
+if [[ `command -v openssl` ]]; then
+    echo "OpenSSL OK"
+else echo "OpenSSL NO"
+fi
+
+if [[ `command -v depmod` ]]; then
+    echo "kmod OK"
+else echo "Kmod NO"
+fi
+
+if [[ `command -v fdformat` ]]; then
+    echo "Util-Linux OK"
+else echo "Util-Linux NO"
+fi
+
+if [[ `command -v e2fsck` ]]; then
+    echo "e2fsprogs OK"
+else echo "e2fsprogs NO"
+fi
+
+echo " "
+
+echo "If everything is OK above you should be able to compile"
+
+echo " "
+
+if [[ `command -v fsck.jfs` ]]; then
+    echo "jfsutils OK"
+else echo "jfsutils NO"
+fi
+
+if [[ `command -v reiserfsck` ]]; then
+    echo "reiserfsprogs OK"
+else echo "reiserfsprogs NO"
+fi
+
+if [[ `command -v mksquashfs` ]]; then
+    echo "squashfs-tools OK"
+else echo "squashfs-tools NO"
+fi
+
+if [[ `command -v pccardctl` ]]; then
+    echo "pcmciautils OK"
+else echo "pcmciautils NO"
+fi
+
+if [[ `command -v pccardctl` ]]; then
+    echo "pcmciautils OK"
+else echo "pcmciautils NO"
+fi
+
+if [[ `command -v quota` ]]; then
+    echo "quota-tools OK"
+else echo "quota-tools NO"
+fi
+
+if [[ `command -v pppd` ]]; then
+    echo "PPP OK"
+else echo "PPP NO"
+fi
+
+if [[ `command -v showmount` ]]; then
+    echo "nfs-utils OK"
+else echo "nfs-utils NO"
+fi
+
+if [[ `command -v ps` ]]; then
+    echo "Procps OK"
+else echo "Procps NO"
+fi
+
+if [[ `command -v udevd` ]]; then
+    echo "udev OK"
+else echo "udev NO"
+fi
+
+if [[ `command -v udevd` ]]; then
+    echo "udev OK"
+else echo "udev NO"
+fi
+
+if [[ `command -v grub-install || command -v grub` ]]; then
+    echo "Grub OK"
+else echo "Grub NO"
+fi
+
+if [[ `command -v grub-install || command -v grub` ]]; then
+    echo "Grub OK"
+else echo "Grub NO"
+fi
+
+
 mcelog --version
 iptables --version
 sphinx-build --version

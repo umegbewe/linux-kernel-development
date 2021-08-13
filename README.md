@@ -3,7 +3,8 @@
 The purpose of this repo is to get you started with packages and resources necessary to develop for the Linux Kernel
 
 ## check.sh script
-The check.sh script checks and installs the required packages to compile Linux Kernel for your distribution
+The check.sh script checks and installs the required packages to compile Linux Kernel for your distribution.<br>
+Usage: ``bash check.sh``
 
 Example:
 ```

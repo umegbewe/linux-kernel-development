@@ -4,9 +4,9 @@ The purpose of this repo is to get you ready with tools and resources to develop
 
 ## Courses and Links
 - https://training.linuxfoundation.org/training/a-beginners-guide-to-linux-kernel-development-lfd103/ (Recommended)
+- [Linux From Scratch Book](https://www.linuxfromscratch.org/lfs/download.html) (Recommended)
 - https://www.linuxtopia.org/online_books/linux_kernel/kernel_configuration/
 - https://www.kernel.org/doc/html/v4.16/process/howto.html
-- Linux From Scratch Book
 
 ## Minimum Requirements to compile the Linux Kernel
 
@@ -15,7 +15,7 @@ GCC is a compiler for C and C++ programming languages, the Linux Kernel is writt
 
 ### Clang [Wikipedia](https://en.wikipedia.org/wiki/Clang)
 Clang is an "LLVM native" C/C++/Objective-C compiler a substitute to GCC. Distributions such as Android, ChromeOS use Clang built kernels. 
-☺️  Pronounced “klang,” not “see-lang.”
+:smile:  Pronounced “klang,” not “see-lang.”
 
 ### Make [Read more](https://www.gnu.org/software/make/)
 Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files. 
@@ -42,6 +42,11 @@ Module signing and external certificate handling use the OpenSSL and crypto libr
 kmod is a multi-call binary which implements the programs used to control Linux Kernel modules. Linux distributions use modules in order to load only the needed driver for the system based on the hardware present, instead of building all possible drivers in the kernel to one large chunk.
 
 **These are the basic packages required, you can find others [here](https://www.kernel.org/doc/html/latest/process/changes.html) or run the ``check.sh`` script to check and install the necessary package required to compile Linux Kernels for your distribution**
+
+
+
+## Found this useful?
+Star the repo and follow me on [Twitter](https://twitter.com/nwebedu_junior) Thanks :heart:
 
 
 

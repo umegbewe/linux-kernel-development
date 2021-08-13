@@ -1,4 +1,5 @@
 #!/bin/bash
+#!/bin/bash
 
 ## ANSI colors (FG & BG)
 RED="$(printf '\033[31m')"  GREENS="$(printf '\033[32m')"  ORANGE="$(printf '\033[33m')"  BLUE="$(printf '\033[34m')"
@@ -28,6 +29,7 @@ reset_color() {
     return
 }
 
+function check() {
 # checks if your distribution is ready for kernel development.
 if [[ `command -v gcc` ]]; then
     echo "Gcc OK"
@@ -90,7 +92,7 @@ fi
 
 echo " "
 
-echo "If everything is OK above you should be able to compile"
+echo "### If everything is OK above you should be able to compile"
 
 echo " "
 
@@ -114,11 +116,6 @@ if [[ `command -v pccardctl` ]]; then
 else echo "pcmciautils NO"
 fi
 
-if [[ `command -v pccardctl` ]]; then
-    echo "pcmciautils OK"
-else echo "pcmciautils NO"
-fi
-
 if [[ `command -v quota` ]]; then
     echo "quota-tools OK"
 else echo "quota-tools NO"
@@ -134,14 +131,15 @@ if [[ `command -v showmount` ]]; then
 else echo "nfs-utils NO"
 fi
 
+if [[ `command -v xfs_db -V` ]]; then
+    echo "nfs-utils OK"
+else echo "nfs-utils NO"
+fi
+
+
 if [[ `command -v ps` ]]; then
-    echo "Procps OK"
-else echo "Procps NO"
-fi
-
-if [[ `command -v udevd` ]]; then
-    echo "udev OK"
-else echo "udev NO"
+    echo "Xfsprogs OK"
+else echo "Xfsprogs NO"
 fi
 
 if [[ `command -v udevd` ]]; then
@@ -154,36 +152,39 @@ if [[ `command -v grub-install || command -v grub` ]]; then
 else echo "Grub NO"
 fi
 
-if [[ `command -v grub-install || command -v grub` ]]; then
-    echo "Grub OK"
-else echo "Grub NO"
+if [[ `command -v mcelog` ]]; then
+    echo "Mcelog OK"
+else echo "Mcelog NO"
 fi
 
+if [[ `command -v iptables` ]]; then
+    echo "Iptables OK"
+else echo "Iptables NO"
+fi
 
-mcelog --version
-iptables --version
-sphinx-build --version
-python3 --version
-git --version
-cscope --version 
-vim --version | head -n1 || nano --version
+if [[ `command -v git` ]]; then
+    echo "Git OK"
+else echo "Git NO"
+fi
+}
 
 function main {
 read -p "install packages not found?[y/n] "
 if [[ "$REPLY" == y || "$REPLY" == yes ]] && [[ `command -v apt-get` ]]; then
 	echo -e "\n${GREEN}[${WHITE}+${GREENS}]${GREENS} Apt package manager detected installing packages........."
 	sleep 1
-	sudo apt-get install build-essential libncurses-dev bison flex libssl-dev libelf-dev
+	sudo apt-get install build-essential libncurses-dev bison flex libssl-dev libelf-dev && echo ${RED} "Packages installed!!!"
 elif [[ "$REPLY" == y || "$REPLY" == yes ]] && [[ `command -v yum` ]]; then
 	echo -e "\n${GREEN}[${WHITE}+${GREENS}]${GREENS} Yum package manager detected installing packages........."
 	sleep 1
-	sudo sudo yum groupinstall "Development Tools" && sudo yum update && sudo yum install clang ncurses-devel bison flex elfutils-libelf-devel openssl-devel
+	sudo sudo yum groupinstall "Development Tools" && sudo yum update && sudo yum install clang ncurses-devel bison flex elfutils-libelf-devel openssl-devel && echo ${RED} "Packages installed!!!"
 elif [[ "$REPLY" == y || "$REPLY" == yes ]] && [[ `command -v dnf` ]]; then
 	echo -e "\n${GREEN}[${WHITE}+${GREENS}]${GREENS} Dnf package manager detected installing packages........."
 	sleep 1
-	sudo dnf group install "Development Tools" && sudo dnf install ncurses-devel bison flex elfutils-libelf-devel openssl-devel
+	sudo dnf group install "Development Tools" && sudo dnf install ncurses-devel bison flex elfutils-libelf-devel openssl-devel && echo ${RED} "Packages installed!!!"
 else echo -ne "${RESETBG}\n${WHITEBG}${BLACK}[${BLACK}!${BLACK}]${BLACK} Thanks for using this tool have a good day and spread the love 💖 ${RESETBG}\n" && exit
 fi
 }
 
+check
 main

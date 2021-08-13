@@ -29,6 +29,9 @@ Might wonder why perl? Obviously the Linux Kernel isn't written in Perl but it i
 ### BC (Basic Calculator) [Wikipedia](https://en.wikipedia.org/wiki/Bc_(programming_language))
 bc is used during the kernel build to generate time constants in header files. Perl was formerly used but required a mechanism to support Perl < 5.8 installations lacking the ``Math::BigInt`` module [check this commit](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=70730bca1331fc50c3caacaea00439de1325bd6e). Though this could still be implemented with C or Perl.
 
+### OpenSSL [Wikipedia](https://en.wikipedia.org/wiki/OpenSSL)
+Module signing and external certificate handling use the OpenSSL and crypto library to do key creation and signature generation. 
+
 
 
 

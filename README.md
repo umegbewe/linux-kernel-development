@@ -32,6 +32,9 @@ bc is used during the kernel build to generate time constants in header files. P
 ### OpenSSL [Wikipedia](https://en.wikipedia.org/wiki/OpenSSL)
 Module signing and external certificate handling use the OpenSSL and crypto library to do key creation and signature generation. 
 
+### Kmod [Read more](https://man7.org/linux/man-pages/man8/kmod.8.html)
+kmod is a multi-call binary which implements the programs used to control Linux Kernel modules. Linux distributions use modules in order to load only the needed driver for the system based on the hardware present, instead of building all possible drivers in the kernel to one large chunk.
+
 
 
 

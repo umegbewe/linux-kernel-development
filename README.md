@@ -23,5 +23,8 @@ Flex is a tool that generates programs that perform pattern-matching on text.
 ### Bison [Wikepedia](https://en.wikipedia.org/wiki/GNU_Bison)
 Bison is a general-purpose parser generator that converts a grammar description (Bison Grammar Files) for an LALR(1) context-free grammar into a C program to parse that grammar, the linux kernel build system generates parsers during build. This requires bison 2.0 or later.
 
+### Perl [Read more](https://unix.stackexchange.com/questions/48018/why-is-perl-installed-by-default-with-most-linux-distributions)
+You might wonder why perl? Obviously the Linux Kernel isn't written in but needed to built some packages, you need perl 5 and the following modules: ``Getopt::Long``, ``Getopt::Std``, ``File::Basename``, and ``File::Find`` to build the kernel.
+
 
 

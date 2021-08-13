@@ -5,6 +5,40 @@ The purpose of this repo is to get you started with packages and resources neces
 ## check.sh script
 The check.sh script checks and installs the required packages to compile Linux Kernel for your distribution
 
+Example:
+```
+Gcc OK
+Clang OK
+Make OK
+Binutils OK
+Flex OK
+Bison OK
+Perl OK
+Bc OK
+OpenSSL OK
+kmod OK
+Util-Linux OK
+e2fsprogs OK
+ 
+### If everything is OK above you should be able to compile
+ 
+jfsutils NO
+reiserfsprogs NO
+squashfs-tools NO
+pcmciautils NO
+quota-tools OK
+PPP NO
+nfs-utils OK
+nfs-utils OK
+Xfsprogs OK
+udev NO
+Grub NO
+Mcelog NO
+Iptables OK
+Git OK
+
+```
+
 ## Courses and Links
 - https://training.linuxfoundation.org/training/a-beginners-guide-to-linux-kernel-development-lfd103/ (Recommended)
 - [Linux From Scratch Book](https://www.linuxfromscratch.org/lfs/download.html) (Recommended)

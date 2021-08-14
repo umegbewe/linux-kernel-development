@@ -64,7 +64,7 @@ Binutils is a collection of software development tools containing a linker, asse
 ### Flex (fast lexical analyzer generator) [Wikipedia](https://en.wikipedia.org/wiki/Flex_(lexical_analyser_generator))
 Flex is a tool that generates programs that perform pattern-matching on text.
 
-### Bison [Wikepedia](https://en.wikipedia.org/wiki/GNU_Bison)
+### Bison [Wikipedia](https://en.wikipedia.org/wiki/GNU_Bison)
 Bison is a general-purpose parser generator that converts a grammar description (Bison Grammar Files) for an LALR(1) context-free grammar into a C program to parse that grammar, the linux kernel build system generates parsers during build. This requires bison 2.0 or later.
 
 ### Perl [Read more](https://unix.stackexchange.com/questions/48018/why-is-perl-installed-by-default-with-most-linux-distributions)

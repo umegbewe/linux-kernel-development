@@ -36,7 +36,7 @@ if [[ `command -v gcc` ]]; then
 else echo "Gcc NO"
 fi
 
-if [[ `command -v clang` ]]; then
+if [[ `command -v clang-11` ]]; then
     echo "Clang OK"
 else echo "Clang NO"
 fi
@@ -173,7 +173,7 @@ read -p "install packages not found?[y/n] "
 if [[ "$REPLY" == y || "$REPLY" == yes ]] && [[ `command -v apt-get` ]]; then
 	echo -e "\n${GREEN}[${WHITE}+${GREENS}]${GREENS} Apt package manager detected installing packages........."
 	sleep 1
-	sudo apt-get install build-essential libncurses-dev bison flex libssl-dev libelf-dev && echo ${RED} "Packages installed!!!"
+	sudo apt-get install build-essential libncurses-dev bison flex libssl-dev libelf-dev clang-11 && echo ${RED} "Packages installed!!!"
 elif [[ "$REPLY" == y || "$REPLY" == yes ]] && [[ `command -v yum` ]]; then
 	echo -e "\n${GREEN}[${WHITE}+${GREENS}]${GREENS} Yum package manager detected installing packages........."
 	sleep 1

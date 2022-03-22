@@ -33,61 +33,61 @@ function check() {
 # checks if your distribution is ready for kernel development.
 if [[ `command -v gcc` ]]; then
     echo "Gcc OK"
-else echo "Gcc NO"
+else echo "Gcc ${RED}NO${RESETBG}"
 fi
 
 if [[ `command -v clang` ]]; then
     echo "Clang OK"
-else echo "Clang NO"
+else echo "Clang ${RED}NO${RESETBG}"
 fi
 
 if [[ `command -v make` ]]; then
     echo "Make OK"
-else echo "Make NO"
+else echo "Make ${RED}NO${RESETBG}"
 fi
 if [[ `command -v ld` ]]; then
     echo "Binutils OK"
-else echo "BInutils NO"
+else echo "BInutils ${RED}NO${RESETBG}"
 fi
 
 if [[ `command -v flex` ]]; then
     echo "Flex OK"
-else echo "Flex NO"
+else echo "Flex ${RED}NO${RESETBG}"
 fi
 
 if [[ `command -v bison` ]]; then
     echo "Bison OK"
-else echo "Bison NO"
+else echo "Bison ${RED}NO${RESETBG}"
 fi
 
 if [[ `command -v perl` ]]; then
     echo "Perl OK"
-else echo "Perl NO"
+else echo "Perl ${RED}NO${RESETBG}"
 fi
 
 if [[ `command -v bc` ]]; then
     echo "Bc OK"
-else echo "Bc NO"
+else echo "Bc ${RED}NO${RESETBG}"
 fi
 
 if [[ `command -v openssl` ]]; then
     echo "OpenSSL OK"
-else echo "OpenSSL NO"
+else echo "OpenSSL ${RED}NO${RESETBG}"
 fi
 
 if [[ `command -v depmod` ]]; then
     echo "kmod OK"
-else echo "Kmod NO"
+else echo "Kmod ${RED}NO${RESETBG}"
 fi
 
 if [[ `command -v fdformat` ]]; then
     echo "Util-Linux OK"
-else echo "Util-Linux NO"
+else echo "Util-Linux ${RED}NO${RESETBG}"
 fi
 
 if [[ `command -v e2fsck` ]]; then
     echo "e2fsprogs OK"
-else echo "e2fsprogs NO"
+else echo "e2fsprogs ${RED}NO${RESETBG}"
 fi
 
 echo " "
@@ -98,73 +98,73 @@ echo " "
 
 if [[ `command -v fsck.jfs` ]]; then
     echo "jfsutils OK"
-else echo "jfsutils NO"
+else echo "jfsutils ${ORANGE}NO${RESETBG}"
 fi
 
 if [[ `command -v reiserfsck` ]]; then
     echo "reiserfsprogs OK"
-else echo "reiserfsprogs NO"
+else echo "reiserfsprogs ${ORANGE}NO${RESETBG}"
 fi
 
 if [[ `command -v mksquashfs` ]]; then
     echo "squashfs-tools OK"
-else echo "squashfs-tools NO"
+else echo "squashfs-tools ${ORANGE}NO${RESETBG}"
 fi
 
 if [[ `command -v pccardctl` ]]; then
     echo "pcmciautils OK"
-else echo "pcmciautils NO"
+else echo "pcmciautils ${ORANGE}NO${RESETBG}"
 fi
 
 if [[ `command -v quota` ]]; then
     echo "quota-tools OK"
-else echo "quota-tools NO"
+else echo "quota-tools ${ORANGE}NO${RESETBG}"
 fi
 
 if [[ `command -v pppd` ]]; then
     echo "PPP OK"
-else echo "PPP NO"
+else echo "PPP ${ORANGE}NO${RESETBG}"
 fi
 
 if [[ `command -v showmount` ]]; then
     echo "nfs-utils OK"
-else echo "nfs-utils NO"
+else echo "nfs-utils ${ORANGE}NO${RESETBG}"
 fi
 
 if [[ `command -v xfs_db -V` ]]; then
     echo "nfs-utils OK"
-else echo "nfs-utils NO"
+else echo "nfs-utils ${ORANGE}NO${RESETBG}"
 fi
 
 
 if [[ `command -v ps` ]]; then
     echo "Xfsprogs OK"
-else echo "Xfsprogs NO"
+else echo "Xfsprogs ${ORANGE}NO${RESETBG}"
 fi
 
 if [[ `command -v udevd` ]]; then
     echo "udev OK"
-else echo "udev NO"
+else echo "udev ${ORANGE}NO${RESETBG}"
 fi
 
 if [[ `command -v grub-install || command -v grub` ]]; then
     echo "Grub OK"
-else echo "Grub NO"
+else echo "Grub ${ORANGE}NO${RESETBG}"
 fi
 
 if [[ `command -v mcelog` ]]; then
     echo "Mcelog OK"
-else echo "Mcelog NO"
+else echo "Mcelog ${ORANGE}NO${RESETBG}"
 fi
 
 if [[ `command -v iptables` ]]; then
     echo "Iptables OK"
-else echo "Iptables NO"
+else echo "Iptables ${ORANGE}NO${RESETBG}"
 fi
 
 if [[ `command -v git` ]]; then
     echo "Git OK"
-else echo "Git NO"
+else echo "Git ${ORANGE}NO${RESETBG}"
 fi
 }
 

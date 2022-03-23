@@ -1,5 +1,4 @@
 #!/bin/bash
-#!/bin/bash
 
 ## ANSI colors (FG & BG)
 RED="$(printf '\033[31m')"  GREENS="$(printf '\033[32m')"  ORANGE="$(printf '\033[33m')"  BLUE="$(printf '\033[34m')"
@@ -90,6 +89,11 @@ if [[ `command -v e2fsck` ]]; then
 else echo "e2fsprogs ${RED}NO${RESETBG}"
 fi
 
+if [[ `command -v mutt` ]]; then
+    echo "Mutt OK"
+else echo "Mutt ${RED}NO${RESETBG}"
+f
+
 echo " "
 
 echo "### If everything is OK above you should be able to compile"
@@ -173,7 +177,7 @@ read -p "install packages not found?[y/n] "
 if [[ "$REPLY" == y || "$REPLY" == yes ]] && [[ `command -v apt-get` ]]; then
 	echo -e "\n${GREEN}[${WHITE}+${GREENS}]${GREENS} Apt package manager detected installing packages........."
 	sleep 1
-	sudo apt-get install build-essential libncurses-dev bison flex libssl-dev libelf-dev clang-11 && echo ${RED} "Packages installed!!!"
+	sudo apt-get install build-essential libncurses-dev bison flex libssl-dev libelf-dev clang-11 mutt && echo ${RED} "Packages installed!!!"
 elif [[ "$REPLY" == y || "$REPLY" == yes ]] && [[ `command -v yum` ]]; then
 	echo -e "\n${GREEN}[${WHITE}+${GREENS}]${GREENS} Yum package manager detected installing packages........."
 	sleep 1

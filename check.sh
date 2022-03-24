@@ -92,7 +92,7 @@ fi
 if [[ `command -v mutt` ]]; then
     echo "Mutt OK"
 else echo "Mutt ${RED}NO${RESETBG}"
-f
+fi
 
 echo " "
 

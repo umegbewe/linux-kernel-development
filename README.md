@@ -20,9 +20,9 @@ OpenSSL OK
 kmod OK
 Util-Linux OK
 e2fsprogs OK
- 
+
 ### If everything is OK above you should be able to compile
- 
+
 jfsutils NO
 reiserfsprogs NO
 squashfs-tools NO
@@ -52,11 +52,11 @@ Git OK
 GCC is a compiler for C and C++ programming languages, the Linux Kernel is written in C and GCC is it's default compiler
 
 ### Clang [Wikipedia](https://en.wikipedia.org/wiki/Clang)
-Clang is an "LLVM native" C/C++/Objective-C compiler a substitute to GCC. Distributions such as Android, ChromeOS use Clang built kernels. 
+Clang is an "LLVM native" C/C++/Objective-C compiler a substitute to GCC. Distributions such as Android, ChromeOS use Clang built kernels.
 :smile:  Pronounced “klang,” not “see-lang.”
 
 ### Make [Read more](https://www.gnu.org/software/make/)
-Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files. 
+Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files.
 
 ### Binutils [Read more](https://www.gnu.org/software/binutils/)
 Binutils is a collection of software development tools containing a linker, assembler and other tools to work with object files and archives.
@@ -74,19 +74,18 @@ Might wonder why perl? Obviously the Linux Kernel isn't written in Perl but it i
 bc is used during the kernel build to generate time constants in header files. Perl was formerly used but required a mechanism to support Perl < 5.8 installations lacking the ``Math::BigInt`` module [check this commit](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=70730bca1331fc50c3caacaea00439de1325bd6e). Though this could still be implemented with C or Perl.
 
 ### OpenSSL [Wikipedia](https://en.wikipedia.org/wiki/OpenSSL)
-Module signing and external certificate handling use the OpenSSL and crypto library to do key creation and signature generation. 
+Module signing and external certificate handling use the OpenSSL and crypto library to do key creation and signature generation.
 
 ### Kmod [Read more](https://man7.org/linux/man-pages/man8/kmod.8.html)
 kmod is a multi-call binary which implements the programs used to control Linux Kernel modules. Linux distributions use modules in order to load only the needed driver for the system based on the hardware present, instead of building all possible drivers in the kernel to one large chunk.
 
 **These are the basic packages required listed, you can find others [here](https://www.kernel.org/doc/html/latest/process/changes.html)**
 
-
+## git_setup.sh & mutt_setup.sh scripts
+[Read More about mutt](http://www.mutt.org/doc/manual/#configuration)
+[Read More about git](https://git-scm.com/docs/git-send-email)
+Both scripts help with the configuration of email.<br>
+Usage: ``bash mutt_setup.sh``
 
 ## Found this useful?
 Star the repo and follow me on [Twitter](https://twitter.com/nwebedu_junior) Thanks :heart:
-
-
-
-
-

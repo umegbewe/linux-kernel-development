@@ -82,10 +82,14 @@ kmod is a multi-call binary which implements the programs used to control Linux 
 **These are the basic packages required listed, you can find others [here](https://www.kernel.org/doc/html/latest/process/changes.html)**
 
 ## git_setup.sh & mutt_setup.sh scripts
-[Read More about mutt](http://www.mutt.org/doc/manual/#configuration)
-[Read More about git](https://git-scm.com/docs/git-send-email)
-Both scripts help with the configuration of email.<br>
+[Read more about mutt](http://www.mutt.org/doc/manual/#configuration) </br>
+[Read more about git](https://git-scm.com/docs/git-send-email) </br>
+Both scripts help with the configuration of email. </br>
 Usage: ``bash mutt_setup.sh``
+
+## Important repositories
+``git clone git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git`` </br>
+``git clone git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git``
 
 ## Found this useful?
 Star the repo and follow me on [Twitter](https://twitter.com/nwebedu_junior) Thanks :heart:

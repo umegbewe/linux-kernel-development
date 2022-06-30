@@ -90,6 +90,3 @@ Usage: ``bash mutt_setup.sh``
 ## Important repositories
 ``git clone git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git`` </br>
 ``git clone git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git``
-
-## Found this useful?
-Star the repo and follow me on [Twitter](https://twitter.com/nwebedu_junior) Thanks :heart:
